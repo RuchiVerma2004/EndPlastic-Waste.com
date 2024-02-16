@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntuo&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="web.css" />
+    <title>About Us</title>
+
+    <style>
+      .bg {
+        background: url("https://blog.cleanhub.com/hubfs/LAL04920%201.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 120vh;
+        width: 100vw;
+      }
+      .title {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 110vh;
+      }
+      .pillers img {
+        width: 100px;
+        height: 100px;
+      }
+      .pillers {
+        width: 200px;
+        height: 200px;
+        align-items: center;
+      }
+      .abt-p {
+        width: 220px;
+        text-align: justify;
+      }
+      .mission {
+        width: 70%;
+        margin: auto;
+        padding: 5rem 0rem 0rem 0rem;
+      }
+      .mission p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      h2 {
+        /* padding: 5rem 0rem; */
+        font-size: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="flex spacebetween align-items">
+      <div class="logo">
+        <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+      </div>
+      <nav>
+        <ul class="none show" id="navbar">
+          <li><a class="red" href="about.html">About Us</a></li>
+          <li><a class="red" href="stories.html">Our Stories</a></li>
+          <li><a class="red" href="news.html" target="_blank">News</a></li>
+          <!-- <li> <a class="red" href="">Membership</a></li> -->
+          <li><a class="red" href="e-waste.html">e-waste</a></li>
+          <li>
+            <a class="red" href="clean4green.html" target="_blank"
+              >Clean4Green</a
+            >
+          </li>
+          <li><a class="red" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="icon flex none" id="search">
+       
+        <div class="search" onclick="toggleSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="search-container" id="searchContainer">
+          <div
+            style="
+              color: #052505;
+              font-size: 2rem;
+              padding: 1rem;
+              font-weight: bold;
+            "
+          >
+            What are you looking for?
+          </div>
+          <div class="close-icon" onclick="closeSearch()">
+            <i class="fa-solid fa-xmark" style="color: black"></i>
+          </div>
+          <input type="text" placeholder="Search here..." />
+          <i class="fa-solid fa-magnifying-glass se" style="color: grey"></i>
+        </div>
+        <div class="a">
+          <a href="login_page.html" target="_blank"
+            ><i class="fa-solid fa-user" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+      <div class="hi">
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+      </div>
+    </header>
+    <div id="loading-overlay">
+      <img src="reuse.gif" alt="Loading..." />
+  </div>
+    <div class="bg"></div>
+
+    <div class="title flexc">
+      <h4>OUR MISSION</h4>
+      <h1 class="narrow">To help reduce <br /><b>plastic trash</b></h1>
+      <h4 style="padding: 3rem 0rem">
+        We concentrate on strengthening collection,<br />
+        sorting, processing, and recycling systems, particularly in underserved
+        areas,<br />
+        in order to increase waste management capacity and capabilities.
+      </h4>
+    </div>
+
+    <section class="mission">
+      <h2>Our Mission: A Tribute to Mahatma Gandhi</h2>
+      <p>
+        “A clean India would be the best tribute India could pay to Mahatma
+        Gandhi on his 150 birth anniversary in 2019,” said Shri Narendra Modi as
+        he launched the Swachh Bharat Mission at Rajpath in New Delhi. On 2nd
+        October 2014, Swachh Bharat Mission was launched throughout length and
+        breadth of the country as a national movement. The campaign aims to
+        achieve the vision of a ‘Clean India’ by 2nd October 2019.
+      </p>
+      <p>
+        At <b>Endplastic</b>Waste.com, we are inspired by this vision and are
+        committed to making a significant contribution to a cleaner India and a
+        greener world. Our mission is to raise awareness about the detrimental
+        effects of plastic waste on our environment and to encourage responsible
+        and sustainable practices that reduce plastic usage and pollution.
+      </p>
+      <p>
+        Join us in this endeavor as we strive for a cleaner, plastic-free India
+        and a future that honours Mahatma Gandhi's legacy.
+      </p>
+    </section>
+    <section class="lead" style="padding-top: 5rem">
+      <h2>OUR CORE PILLERS</h2>
+
+      <div class="r flex spacebetween">
+        <div class="pillers flexc">
+          <img
+            src="https://endplasticwaste.org/-/media/Project/New-Page-Icons/infrastrucutre.svg?iar=0&rev=d72769fcdcd64df8917e4420c57c5a0e&hash=684610E1857A892D1DA099D2B70DCF8C"
+            alt=""
+          />
+          <h4>Infrastructure</h4>
+          <div class="abt-p">
+            Develop and invest in systems to improve the collection and
+            management of plastic waste
+          </div>
+        </div>
+        <div class="pillers flexc">
+          <img
+            src="https://endplasticwaste.org/-/media/Project/New-Page-Icons/innovation.svg?iar=0&rev=a55abef4833c4f33a6b5d940d4ac58e9&hash=E1DD9309A737BF843B78868A83BBC80B"
+            alt=""
+          />
+          <h4>Innovation</h4>
+          <div class="abt-p">
+            Incubate and accelerate ideas to help scale new solutions and
+            technologies
+          </div>
+        </div>
+        <div class="pillers flexc">
+          <img
+            src="https://endplasticwaste.org/-/media/Project/New-Page-Icons/education.svg?iar=0&rev=236a4a1cde374ee9bbce641a0517d602&hash=260EE74E1F9FEE027BAA98A188546BE4"
+            alt=""
+          />
+          <h4>Education</h4>
+          <div class="abt-p">
+            Empower stakeholders with the knowledge to better understand and
+            take action in the plastic waste challenge
+          </div>
+        </div>
+        <div class="pillers flexc">
+          <img
+            src="https://endplasticwaste.org/-/media/Project/New-Page-Icons/cleanups.svg?iar=0&rev=ccbd07db706247629f2f413da9e4cf4b&hash=C1C5CDA2203153AD4391B8F9548F8B2E"
+            alt=""
+          />
+          <h4>Cleanup</h4>
+          <div class="abt-p">
+            Work with partners to address plastic waste at source
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="lead" style="padding: 8rem 0rem 0rem 0rem">
+      <h2>OUR LEADERS</h2>
+      <hr />
+      <p style="font-size: 1rem; font-weight: 400; padding: 2rem 0rem">
+        Our Leadership is laying the groundwork to stop the use of plastic,
+        <br />and plans are being implemented. Organizing meetings with various
+        <br />parties and supervising project execution.
+      </p>
+      <div class="about-leader flex spacebetween">
+        <div class="leader flexc">
+          <img src="ruchi.jpg" alt="" />
+          <div class="abt" style="text-align: center;padding-top: 10px;">Ruchi Verma <br>Btech CSE Student</div>
+        </div>
+        <div class="leader flexc">
+          <img src="bhumika.jpg" alt="" />
+          <div class="abt" style="text-align: center;padding-top: 10px;">Bhumika <br>Btech CSE Student</div>
+        </div>
+        <div class="leader flexc">
+          <img src="bhawna .jpeg.jpg" alt="" />
+          <div class="abt" style="text-align: center;padding-top: 10px;">Bhawna <br>Btech CSE Student</div>
+        </div>
+        <div class="leader flexc">
+          <img src="mishthi.jpg" alt="" />
+          <div class="abt" style="text-align: center;padding-top: 10px;">Mishthi <br>Btech CSE Student</div>
+        </div>
+      </div>
+    </section>
+
+    <div style="background-color: #f1efc8; padding: 5rem 0rem">
+      <section class="flexc sec2">
+        <h3>Join our team!</h3>
+        <p>
+          Drop us a message if you'd like to work with us to end plastic waste,
+          explore membership opportunities, media partnerships, or other
+          enquiries.
+        </p>
+        <div>
+          <b><a  class="btn btnc" href="contact.html">Contact Us</a></b>
+          <b><a  class="btn " href="">Follow Us</a></b>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="usec flex spacebetween align-items">
+        <div class="flex sec3">
+          <ul class="footer__item">
+            <li><a class="" href="about.html">About</a></li>
+            <li><a class="" href="about.html">Our Ambition</a></li>
+            <li><a class="" href="about.html">Leadership</a></li>
+            <li><a class="" href="about.html">Members</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="work.html">Our Work</a></li>
+            <li><a class="" href="work.html">Our Project</a></li>
+            <!-- <li><a class="" href="rep.html">REPs</a></li> -->
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="stories.html">Our Stories</a></li>
+            <li><a class="" href="stories.html">From EndPlastic</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="news.html">News</a></li>
+            <li><a class="" href="news.html">Media Releases</a></li>
+            <li><a class="" href="news.html">Progress Reports</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="index.html">Quick Links</a></li>
+            <li><a class="" href="privacy.html">Privacy Policy</a></li>
+            <li><a class="" href="tandc.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <div class="secb flex spacebetween align-items" style="">
+        <p
+          class=""
+          style="color: #ffffff; font-size: small; padding-left: 4rem"
+        >
+          &copy; 2023 EndPlastic Waste.com.
+        </p>
+        <div class="icon">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/ruchi-verma2004/"
+            ><i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i
+          ></a>
+          <a href="https://twitter.com/home"
+            ><i class="fa-brands fa-twitter" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="javas.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        setTimeout(function() {
+          loadingOverlay.style.display = "none"; // Hide the loading overlay after 2 seconds
+        }, 500); // Set timeout for 2 seconds (2000 milliseconds)
+      });
+    </script>
+  </body>
+</html>

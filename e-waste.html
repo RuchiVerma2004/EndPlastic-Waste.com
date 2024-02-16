@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-waste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="web.css" />
+    <style>
+      * {
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #fff;
+      }
+
+      /* Navigation bar styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #052524;
+        padding: 5px;
+      }
+
+      .logo img {
+        width: 100px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0 20px;
+        transition: all 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: red;
+      }
+
+      /* Button styles */
+      button {
+        padding: 10px 30px;
+        background-color: black;
+        border: 2px solid #222;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px #383737;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: red;
+      }
+
+      /* About section styles */
+      .map {
+        background-image: url("https://e-wfl.netlify.app/assets/MAP-5a29f087.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about {
+        background-color: #1e1e1e;
+        width: 35%;
+        border-radius: 5px;
+        padding: 50px;
+        margin-left: 40px;
+        opacity: 0.8;
+        transition: all 1s;
+      }
+      .about:hover {
+        transform: scale(1.01);
+      }
+
+      .about h2 {
+        font-size: 32px;
+        font-weight: 300;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .about p {
+        font-size: 20px;
+        font-weight: 300;
+        color: #6e7373;
+        line-height: 1.5;
+      }
+      h3 {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+      /* Feature section styles */
+      .feature-container {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin: 30px auto;
+      }
+
+      .feature {
+        width: 40%;
+        background-color: #052524;
+        padding: 30px;
+        border-radius: 5px;
+        transition: all 1s;
+      }
+
+      .feature:hover {
+        transform: scale(1.02);
+      }
+
+      .feature h3 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      /* Input styles */
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #444;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      /* Search button styles */
+      .search-button {
+        margin-top: 20px;
+        background-color: red;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .search-button:hover {
+        background-color: #ff5555;
+      }
+      .login-button {
+        margin-right: 20px; /* Add margin to create space between the button and navigation links */
+      }
+
+      .login-button button {
+        background-color: black;
+        border: 2px solid #222;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px #383737;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .login-button button:hover {
+        background-color: red;
+      }
+
+      .login-form {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+      }
+
+      .form-container {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: #fff;
+      }
+
+      .form-container h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .form-container label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .form-container input[type="text"],
+      .form-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #444;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .form-container button {
+        background-color: black;
+        border: 2px solid #222;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .form-container button:hover {
+        background-color: red;
+      }
+
+      .facility-results {
+        background-color: #5a5a5f;
+        border: 2px solid #5a5a5f;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px #20d820;
+        margin-top: 20px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="1-removebg-preview.png" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="map">
+      <img src="Postergif-590a5c8d.gif" alt="Map Image" style="opacity: 0.8" />
+      <section class="about">
+        <h2>Search E-waste facilities</h2>
+        <h3>Fill up the Location and get the nearest E-waste facilities</h3>
+        <div class="for">
+          <div class="form">
+            <label for="city">City/district</label>
+            <input
+              type="text"
+              id="city"
+              list="cityList"
+              placeholder="Select City/district"
+              value=""
+            />
+            <datalist id="cityList">
+              <!-- City suggestions will be added dynamically using JavaScript -->
+            </datalist>
+          </div>
+          <div class="form">
+            <label for="state">State</label>
+            <input
+              type="text"
+              id="state"
+              list="stateList"
+              placeholder="Select State"
+              value=""
+            />
+            <datalist id="stateList">
+              <!-- State suggestions will be added dynamically using JavaScript -->
+            </datalist>
+          </div>
+        </div>
+        <button class="search-button" onclick="searchFacilities()">
+          Search
+        </button>
+        <div id="facilityList" style="display: none">
+          <div class="facility-results" style="background-color: #5a5a5f">
+            <h2>Nearest E-waste Facilities</h2>
+
+            <ul id="facilityResults">
+              <!-- Results will be displayed here -->
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="feature-container">
+      <div class="feature">
+        <h3>What is e-waste?</h3>
+        <br />
+        <p>
+          Computers and peripherals: Desktop computers, laptops, monitors,
+          keyboards, mice, and printers.<br />Consumer electronics: Televisions,
+          DVD players, game consoles, cameras, and audio equipment.<br />Communication
+          devices: Mobile phones, smartphones, and landline phones. Home
+          appliances: Refrigerators, washing machines, microwave ovens, and air
+          conditioners.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Health Risks</h3>
+        <br />
+        <p>
+          Human Exposure: Workers involved in the informal recycling of e-waste
+          are often exposed to toxic substances, leading to various health
+          problems such as respiratory issues, skin ailments, and long-term
+          conditions like cancer and developmental disorders.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-container">
+      <div class="feature">
+        <h3>Benefits of e-waste facility locator</h3>
+        <br />
+        <p>
+          An e-waste facility locator is a tool or service that helps
+          individuals and businesses find locations where they can properly
+          dispose of or recycle electronic waste (e-waste)<br />
+          Such tools provide several benefits, both for the environment and
+          society as a whole Public Health Benefits,Convenience and
+          Accessibility,Regulatory Compliance.<br />
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Working</h3>
+        <br />
+        <p>
+          The software of an e-waste facility locator works by providing users
+          with a digital platform or application that helps them find nearby
+          locations where they can properly dispose of or recycle electronic
+          waste (e-waste).
+        </p>
+      </div>
+    </div>
+    <div class="login-form" id="loginForm">
+      <div class="form-container">
+        <h2>Login/Signup</h2>
+        <form>
+          <!-- Add your form fields (e.g., username, password, etc.) here -->
+          <!-- Example: -->
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <!-- Add more fields as needed -->
+
+          <button type="submit">Login/Signup</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const facilities = [
+        {
+          city: "Thane",
+          state: "Maharashtra",
+          address:
+            "WE-The Recycling Company, H. No. 2212, Sr. No. 9-1 N, Behind Essar Petrol Pump, Village Borpada, Tal. Bhiwandi, Dist. Thane",
+        },
+        {
+          city: "Delhi",
+          state: "Delhi",
+          address:
+            "M/s Fozia Traders, Khasra No.13/1, Saboli Mandoli Industrial Area, Delhi-110093",
+        },
+        {
+          city: "Bangalore",
+          state: "Karnataka",
+          address:
+            "M/s. Sriram Eco Raksha Computer Services Pvt. Ltd. No. B-29, KSSIDC Indl. Estate, Bommasandra, Hosur Road, Anekal Taluk, Bangalore – 560 099",
+        },
+        {
+          city: "Chennai",
+          state: "Tamil Nadu",
+          address: "M/s. Tritech Systems, No.165/3, Porur, Chennai- 116",
+        },
+        {
+          city: "Hoogly",
+          state: "West Bengal",
+          address:
+            "M/s J.S. Pigments Pvt. ltd, Vill.+ P.O.-Jarua, P.S.- Polba, Hoogly-712138",
+        },
+        {
+          city: "Gurugram",
+          state: "Haryana",
+          address:
+            "M/s. Nirvana Recycling Pvt. Ltd., Plot No. D-6, Udyog, Vihar, Phase-VI, Sector-37, Gurugram",
+        },
+        {
+          city: "Pune",
+          state: "Maharashtra",
+          address:
+            "Hi-Tech Recycling (I) Pvt. Ltd, Property No.193, Gat No. 89, Pune-Satara Road, Shindewadi, Tal: Bhor, Dist:- Pune",
+        },
+        {
+          city: "Ahmedabad",
+          state: "Gujarat",
+          address:
+            "M/s. Mangalam ECS Environment Ltd, ECS House, 11-12 Garden View, Opp. Auda Garden, Sindhu Bhawan road, Off SG Highway-Pakwan Circle, Bodakdev, Ahmedabad 380054",
+        },
+        {
+          city: "Jaipur",
+          state: "Rajasthan",
+          address:
+            "M/s  ETCO  E-waste  Recycler  pvt.  ltd,  SB-23, Shilp Bari Road, 1415 VKI Area, Jaipur",
+        },
+        {
+          city: "Mathura",
+          state: "Uttar Pradesh",
+          address: "M/s K.M. Metals  Suppliers  9/270,271,Mathura Agra.",
+        },
+        {
+          city: "Kochi",
+          state: "Kerala",
+          address:
+            "M/s. Kerala Enviro Infrastructure Ltd, Infrastructure Ltd E Waste Dismantling Facility, Common TSDF project, Inside Fact-CD Campus,Ambalamedu, Kochi 682303",
+        },
+        {
+          city: "Gwalior",
+          state: "Madhya Pradesh",
+          address:
+            "M/s. Prometheus Recycling Private Limited, 786/4, 799/1, 800,, Dilawar Ka pura, Susera, Tal: Gird Dist: Gwalior, SIDC",
+        },
+        {
+          city: "Guwahati",
+          state: "Assam",
+          address:
+            "M/s. United Global Trust, F-5, Zoo Road, S enduri Ali Path, Guwahati, Dist. Kamrup (M) Assam",
+        },
+        {
+          city: "Gurugram",
+          state: "Haryana",
+          address:
+            "M/s. Ecoverva Waste Recycling Private Limited, Plot No. 350 Block C Village Pathreri Ansal Pioneer Industrial Park, Distt. Gurgaon",
+        },
+        {
+          city: "Haridwar",
+          state: "Uttarakhand",
+          address:
+            "M/s Bharat Oil & Waste Management ltd. Mauja Mukimpur, Laksar, Haridwar",
+        },
+        {
+          city: "Indore",
+          state: "Madhya Pradesh",
+          address:
+            "M/s. Unique Eco Recycle, Plot No. 26, Industrial Area, Palda, Indore (Madhya Pradesh)",
+        },
+        {
+          city: "Nagpur",
+          state: "Maharashtra",
+          address:
+            "ECO RESET PRIVATE LIMITED PLOT NO. 19/1, MOUZA BHOWARI, KAMPTEE, NAGPUR,MAHARASHTRA - 441001",
+        },
+        {
+          city: "Rajkot",
+          state: "Gujarat",
+          address:
+            "M/s. Galaxy Recycling, Sr. No. 36/P1, P2, 37/P2, 38/P2, Plot No. 52 &53, Near Tirth Agro. Pvt. Ltd., At: Bharudi, Tal: Gondal, Rajkot",
+        },
+        {
+          city: "Visakhapatnam",
+          state: "Andhra Pradesh",
+          address:
+            "M/s. Green Waves Environmental Solution, Sy. No. 43/1, Mindi (V), Gajuwaka (M), Visakhapatnam District.",
+        },
+        {
+          city: "Raipur",
+          state: "Chhattisgarh",
+          address:
+            "M/s. Star E-Processors, Village-Baktara, P.O.- Godi, Tehsil-Arung, District- Raipur, Chhattisgarh",
+        },
+        {
+          city: "Goa",
+          state: "Goa",
+          address:
+            "M/s. Egnus Ewaste Solution Private Limited., Plot No.31, Village: Motwan, Tal: Ankleshwar, Dist.: Bharuch- 393020",
+        },
+        {
+          city: "Panipat",
+          state: "Haryana",
+          address: "M/s. Exigo Recycling (P) Ltd., Barsat Road, Panipat",
+        },
+        {
+          city: "Solan",
+          state: "Himachal Pradesh",
+          address:
+            "M/s. Shivalik Solid Waste Management Ltd., (Unit –II), Village-Shabowal, Tehsil Nalagarh, District-Solan HP",
+        },
+        {
+          city: "Gangyal",
+          state: "Jammu and Kashmir",
+          address: "M/s. VRG Groups, Gangyal",
+        },
+        {
+          city: "Ranchi",
+          state: "Jharkhand",
+          address:
+            "M/s. Meliorate Lubes Pvt Ltd, Plot No. 606/A, Ward No. 4/34, Vikas Nagar, hesal Piska More, Ranchi Jharkhand - 834005",
+        },
+        {
+          city: "Khurda",
+          state: "Orissa",
+          address:
+            "M/s.  Sani  Clean  (P)  Ltd.,  Plot  No.  802/947,  at- Tangiapada, Niala, Dist-Khurda",
+        },
+        {
+          city: "Ludhiana",
+          state: "Punjab",
+          address:
+            "M/s  Spreco  Recycling,  D-45,  Industrial  Area, Focal Point, Raikot, District Ludhiana.",
+        },
+        {
+          city: "Alwar",
+          state: "Rajasthan",
+          address:
+            "M/s. H.M.E-waste Management G1-226, RIICO Ind.Area, Kehrani Bhiwadi (Extn.) Tijara Distt-Alwar",
+        },
+        // Add more facilities in India here
+      ];
+
+      function searchFacilities() {
+        const cityInput = document.getElementById("city").value.trim();
+        const stateInput = document.getElementById("state").value.trim();
+        const facilityResults = document.getElementById("facilityResults");
+        const facilityList = document.getElementById("facilityList");
+
+        // Clear previous results
+        facilityResults.innerHTML = "";
+
+        // Filter facilities based on user input
+        const filteredFacilities = facilities.filter((facility) => {
+          return (
+            facility.city.toLowerCase() === cityInput.toLowerCase() ||
+            facility.state.toLowerCase() === stateInput.toLowerCase()
+          );
+        });
+
+        if (filteredFacilities.length > 0) {
+          // Display the list of facilities
+          filteredFacilities.forEach((facility) => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `City: ${facility.city}, State: ${
+              facility.state
+            }, Address: <a href="https://www.google.com/maps/search/${encodeURIComponent(
+              facility.address
+            )}" target="_blank" style="color:#3afe63" >${facility.address}</a>`;
+            facilityResults.appendChild(listItem);
+          });
+          facilityList.style.display = "block";
+        } else {
+          // No facilities found
+          const noResultsMessage = document.createElement("p");
+          noResultsMessage.textContent =
+            "No facilities found for the provided city/state.";
+          facilityResults.appendChild(noResultsMessage);
+          facilityList.style.display = "block";
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginSignupButton = document.getElementById("loginSignupButton");
+        const loginForm = document.getElementById("loginForm");
+
+        loginSignupButton.addEventListener("click", function () {
+          loginForm.style.display = "block";
+        });
+
+        // Add logic to close the form when a user submits it or clicks outside it
+        // For example:
+        // const form = document.querySelector('.form-container');
+        // document.addEventListener('click', function (e) {
+        //     if (!form.contains(e.target) && loginForm.style.display === 'block') {
+        //         loginForm.style.display = 'none';
+        //     }
+        // });
+      });
+
+      // Sample city and state data (you can replace this with your own data)
+
+      const cities = [
+        "Thane",
+        "Delhi",
+        "Bangalore",
+        "Chennai",
+        "Hoogly",
+        "Gurugram",
+        "Pune",
+        "Ahmedabad",
+        "Jaipur",
+        "Mathura",
+        "Kochi",
+        "Gwalior",
+        "Guwahati",
+        "Gurugram",
+        "Haridwar",
+        "Indore",
+        "Nagpur",
+        "Rajkot",
+        "Visakhapatnam",
+        "Raipur",
+        "Goa",
+        "Panipat",
+        "Solan",
+        "Gangyal",
+        "Ranchi",
+        "Khurda",
+        "Ludhiana",
+        "Alwar",
+      ];
+
+      const states = [
+        "Maharashtra",
+        "Delhi",
+        "Karnataka",
+        "Tamil Nadu",
+        "West Bengal",
+        "Haryana",
+        "Maharashtra",
+        "Gujarat",
+        "Rajasthan",
+        "Uttar Pradesh",
+        "Kerala",
+        "Madhya Pradesh",
+        "Assam",
+        "Haryana",
+        "Uttarakhand",
+        "Madhya Pradesh",
+        "Maharashtra",
+        "Gujarat",
+        "Andhra Pradesh",
+        "Chhattisgarh",
+        "Goa",
+        "Haryana",
+        "Himachal Pradesh",
+        "Jammu and Kashmir",
+        "Jharkhand",
+        "Orissa",
+        "Punjab",
+        "Rajasthan",
+      ];
+
+      // Get input elements and datalists
+      const cityInput = document.getElementById("city");
+      const stateInput = document.getElementById("state");
+      const cityDatalist = document.getElementById("cityList");
+      const stateDatalist = document.getElementById("stateList");
+
+      // Function to populate city suggestions in the datalist
+      function populateCitySuggestions() {
+        cityDatalist.innerHTML = "";
+        cities.forEach((city) => {
+          const option = document.createElement("option");
+          option.value = city;
+          cityDatalist.appendChild(option);
+        });
+      }
+
+      // Function to populate state suggestions in the datalist
+      function populateStateSuggestions() {
+        stateDatalist.innerHTML = "";
+        states.forEach((state) => {
+          const option = document.createElement("option");
+          option.value = state;
+          stateDatalist.appendChild(option);
+        });
+      }
+
+      // Event listeners for input fields
+      cityInput.addEventListener("input", populateCitySuggestions);
+      stateInput.addEventListener("input", populateStateSuggestions);
+
+      // Initial population of suggestions
+      populateCitySuggestions();
+      populateStateSuggestions();
+    </script>
+
+    <footer>
+      <div class="usec flex spacebetween align-items">
+        <div class="flex sec3">
+          <ul class="footer__item">
+            <li><a class="" href="about.html">About</a></li>
+            <li><a class="" href="about.html">Our Ambition</a></li>
+            <li><a class="" href="about.html">Leadership</a></li>
+            <li><a class="" href="about.html">Members</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="work.html">Our Work</a></li>
+            <li><a class="" href="work.html">Our Project</a></li>
+            <!-- <li><a class="" href="rep.html">REPs</a></li> -->
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="stories.html">Our Stories</a></li>
+            <li><a class="" href="stories.html">From EndPlastic</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="news.html">News</a></li>
+            <li><a class="" href="news.html">Media Releases</a></li>
+            <li><a class="" href="news.html">Progress Reports</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="index.html">Quick Links</a></li>
+            <li><a class="" href="privacy.html">Privacy Policy</a></li>
+            <li><a class="" href="tandc.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <div class="secb flex spacebetween align-items" style="">
+        <p
+          class=""
+          style="color: #ffffff; font-size: small; padding-left: 4rem"
+        >
+          &copy; 2023 e-स्वच्छता
+        </p>
+        <div class="icon">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/ruchi-verma2004/"
+            ><i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i
+          ></a>
+          <a href="https://twitter.com/home"
+            ><i class="fa-brands fa-twitter" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      window.addEventListener("load", function () {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        setTimeout(function() {
+          loadingOverlay.style.display = "none"; // Hide the loading overlay after 2 seconds
+        }, 500); // Set timeout for 2 seconds (2000 milliseconds)
+      });
+    </script>
+  </body>
+</html>

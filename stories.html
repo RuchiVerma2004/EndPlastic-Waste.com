@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="web.css" />
+    <title>Stories</title>
+    <style>
+      .mission {
+        width: 50%;
+        margin: auto;
+      }
+      .mission p {
+        font-size: 1.2rem;
+        font-weight: 450;
+      }
+      .mission hr {
+        width: 100%;
+        margin: 4rem 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header class="flex spacebetween align-items">
+      <div class="logo">
+        <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+      </div>
+      <nav>
+        <ul class="none show" id="navbar">
+          <li><a class="red" href="about.html">About Us</a></li>
+          <li><a class="red" href="stories.html">Our Stories</a></li>
+          <li><a class="red" href="news.html" target="_blank">News</a></li>
+          <!-- <li> <a class="red" href="">Membership</a></li> -->
+          <li><a class="red" href="e-waste.html">e-waste</a></li>
+          <li>
+            <a class="red" href="clean4green.html" target="_blank"
+              >Clean4Green</a
+            >
+          </li>
+          <li><a class="red" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="icon flex none" id="search">
+       
+        <div class="search" onclick="toggleSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="search-container" id="searchContainer">
+          <div
+            style="
+              color: #052505;
+              font-size: 2rem;
+              padding: 1rem;
+              font-weight: bold;
+            "
+          >
+            What are you looking for?
+          </div>
+          <div class="close-icon" onclick="closeSearch()">
+            <i class="fa-solid fa-xmark" style="color: black"></i>
+          </div>
+          <input type="text" placeholder="Search here..." />
+          <i class="fa-solid fa-magnifying-glass se" style="color: grey"></i>
+        </div>
+        <div class="a">
+          <a href="login_page.html" target="_blank"
+            ><i class="fa-solid fa-user" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+      <div class="hi">
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+      </div>
+    </header>
+    <div id="loading-overlay">
+      <img src="reuse.gif" alt="Loading..." />
+  </div>
+    <img
+      style="width: 100%; height: 120vh"
+      src="https://smv.org/media/images/2021.04.15_Recycle_Solar_ClimateC.2e16d0ba.fill-1370x800.jpg"
+      alt=""
+    />
+    <div class="title flexc" style="height: 110vh">
+      <h4 style="font-size: 3rem">
+        Unraveling the Journey: From CSE Student <br />to a Passionate Advocate
+        in the <br />Battle to End Plastic Waste
+      </h4>
+      <button class="btn"><b>Learn More</b></button>
+    </div>
+    <section class="mission" style="padding-top: 5rem">
+      <h2 style="font-size: 2.5rem">
+        Our Stories: Combining Forces for a Cleaner Future
+      </h2>
+      <p>
+        Discover inspiring stories of change and dedication, where the mission
+        to end plastic waste aligns with the vision of a cleaner, more
+        sustainable India championed by the Swachh Bharat Abhiyan.
+      </p>
+    </section>
+
+    <section class="mission" style="padding-top: 5rem">
+      <h3>Technology as a Tool for Change</h3>
+      <p>
+        As a B.Tech CSE students, We leveraged our technical skills to develop
+        solutions that aid in waste management and environmental awareness. We
+        created mobile apps and websites that educated people about the
+        importance of cleanliness and provided them with tools to actively
+        contribute to a cleaner India.<br />
+      </p>
+      <hr />
+    </section>
+    <section class="mission">
+      <h3>
+        Ruchi's Sustainable Business Model: A Step Towards Cleaner Commerce
+      </h3>
+      <p>
+        Ruchi, a forward-thinking entrepreneur, founded a business that aligns
+        with the principles of the Swachh Bharat Abhiyan and
+        endplasticwaste.com. Her commitment to sustainable practices, including
+        plastic alternatives and responsible waste management, not only helps
+        end plastic waste but also contributes to a cleaner, healthier India.<br />
+      </p>
+      <hr />
+    </section>
+    <section class="mission">
+      <h3>Mishthi's Journey to a Plastic-Free Lifestyle</h3>
+      <p>
+        Mishthi, an ardent speaker for both the environment and a cleaner
+        nation. Mishthi's commitment to reducing plastic waste resonates
+        strongly with the goals of Swachh Bharat Abhiyan. By adopting a
+        plastic-free lifestyle, she's not only contributing to a cleaner
+        environment but also aligning with the mission's vision of a litter-free
+        India.
+      </p>
+      <hr />
+    </section>
+
+    <section class="mission">
+      <h3>
+        Bhawna and Bhumika's Cleanup Drives: A Dual Impact on Plastic and Litter
+      </h3>
+      <p>
+        Ther's dedicated volunteer, organizes regular cleanup drives in his
+        community. By targeting plastic waste and general litter, There efforts
+        embody the essence of both endplasticwaste.com and Swachh Bharat
+        Abhiyan. Their story showcases the significance of combining these
+        efforts for a cleaner, more environmentally conscious nation.<br />
+      </p>
+      <hr />
+    </section>
+
+    <section class="mission" style="margin-bottom: 8rem">
+      <h3>Your Story, Our Cause: Join the Movement</h3>
+      <p>
+        Your story is an integral part of our collective mission. Share your
+        journey towards reducing plastic waste and contributing to a cleaner,
+        more sustainable India. By doing so, you not only inspire others but
+        also become a vital piece of the puzzle that leads to a plastic-free
+        future.<br /><a href="">Share Your Story</a>
+      </p>
+    </section>
+
+    <div style="background-color: antiquewhite; padding: 4rem 0rem">
+      <section class="flexc sec2">
+        <h3>Let's work together</h3>
+        <p>
+          Drop us a message if you'd like to work with us to end plastic waste,
+          explore membership opportunities, media partnerships, or other
+          enquiries.
+        </p>
+        <div>
+          <b><a  class="btn btnc" href="contact.html">Contact Us</a></b>
+        <b><a  class="btn " href="">Follow Us</a></b>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="usec flex spacebetween align-items">
+        <div class="flex sec3">
+          <ul class="footer__item">
+            <li><a class="" href="/en/about">About</a></li>
+            <li><a class="" href="/en/about">Our Ambition</a></li>
+            <li><a class="" href="/en/about">Leadership</a></li>
+            <li><a class="" href="/en/about">Members</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="/en/about">Our Work</a></li>
+            <li><a class="" href="/en/about">Our Project</a></li>
+            <!-- <li><a class="" href="/en/about">REPs</a></li> -->
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="/en/about">Our Stories</a></li>
+            <li><a class="" href="/en/about">From EndPlastic</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="/en/about">News</a></li>
+            <li><a class="" href="/en/about">Media Releases</a></li>
+            <li><a class="" href="/en/about">Progress Reports</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="/en/about">Quick Links</a></li>
+            <li><a class="" href="/en/about">Privacy Policy</a></li>
+            <li><a class="" href="/en/about">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <div class="secb flex spacebetween align-items" style="">
+        <p
+          class=""
+          style="color: #ffffff; font-size: small; padding-left: 4rem"
+        >
+          &copy; 2023 EndPlastic Waste.com.
+        </p>
+        <div class="icon">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/ruchi-verma2004/"
+            ><i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i
+          ></a>
+          <a href="https://twitter.com/home"
+            ><i class="fa-brands fa-twitter" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="javas.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        setTimeout(function() {
+          loadingOverlay.style.display = "none"; // Hide the loading overlay after 2 seconds
+        }, 500); // Set timeout for 2 seconds (2000 milliseconds)
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        setTimeout(function() {
+          loadingOverlay.style.display = "none"; // Hide the loading overlay after 2 seconds
+        }, 500); // Set timeout for 2 seconds (2000 milliseconds)
+      });
+    </script>
+  </body>
+</html>

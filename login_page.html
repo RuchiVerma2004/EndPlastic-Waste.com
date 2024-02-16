@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link
+      rel="icon"
+      href="https://p1.hiclipart.com/preview/302/621/70/plastic-bag-compost-en-13432-biodegradation-biodegradable-bag-recycling-bioplastic-waste-png-clipart-thumbnail.jpg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="web.css" />
+    <link rel="stylesheet" href="utils.css" />
+
+    <!---we had linked our css file----->
+  </head>
+  <body>
+    <div id="loading-overlay">
+      <img src="reuse.gif" alt="Loading..." />
+  </div> 
+    <header class="flex spacebetween align-items">
+      <div class="logo">
+        <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+      </div>
+      <nav>
+        <ul class="none show" id="navbar">
+          <li><a class="red" href="about.html">About Us</a></li>
+          <li><a class="red" href="work.html">Our Work</a></li>
+          <li><a class="red" href="stories.html">Our Stories</a></li>
+          <li><a class="red" href="news.html" target="_blank">News</a></li>
+          <li>
+            <a class="red" href="clean4green.html" target="_blank"
+              >Clean4Green</a
+            >
+          </li>
+          <li><a class="red" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="icon flex none" id="search">
+       
+      </div>
+      <div class="hi">
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+      </div>
+    </header>
+    <div class="full-page">
+      <div id="login-form" class="login-page">
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" onclick="login()" class="toggle-btn btn">
+              Log In
+            </button>
+            <button type="button" onclick="register()" class="toggle-btn btn">
+              Sign Up
+            </button>
+          </div>
+          <form id="login" class="input-group-login">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              required
+            />
+
+            <div style="text-align: center; margin-top: 20px; font-size: 20px;"><b>Don't have an account <br> <a href="#" >Sign up</a> here</b></div>
+           
+            <button type="submit" class="submit-btn" style="margin-top: 7rem">
+              Log in
+            </button>
+          </form>
+          <form id="register" class="input-group-register">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Last Name "
+              required
+            />
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Confirm Password"
+              required
+            />
+            <input type="checkbox" class="check-box" /><span
+              >I agree to the terms and conditions</span
+            >
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+      <div class="logo_login">
+        <a href="index.html"
+          ><h1><b>EndPlastic</b><br />Waste.com</h1></a
+        >
+      </div>
+    </div>
+    <script src="javas.js"></script>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+
+        y.classList.add("active");
+        x.classList.remove("active");
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+
+        x.classList.add("active");
+        y.classList.remove("active");
+      }
+    </script>
+ <script>
+  // Array of user objects with email and password
+  const usersData = [
+    { email: "ruchi.verma.22cse@bmu.edu.in", password: "ruchi" },
+    { email: "bhawna.22cse@bmu.edu.in", password: "bhawna" },
+    { email: "bhumika.22cse@bmu.edu.in", password: "bhumika" },
+    { email: "mishti.22cse@bmu.edu.in", password: "passmishthi" },
+    { email: "abc@bmu.edu.in", password: "password" }
+  ];
+
+  // Function to handle login form submission
+  document.getElementById("login").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission for demonstration
+    const email = document.querySelector("#login input[type='text']").value;
+    const password = document.querySelector("#login input[type='password']").value;
+
+    // Check if there's a user with the provided email and password
+    const matchingUser = usersData.find(user => user.email === email && user.password === password);
+
+    if (matchingUser) {
+      alert('Login successful! ');
+
+      // Display success message for a few seconds before redirection
+      setTimeout(function () {
+        window.location.href = "index.html"; // Redirect to index.html
+      }, 200); // 3000 milliseconds = 3 seconds (adjust as needed)
+    } else {
+      alert('Login failed. Please check your credentials.');
+    }
+  });
+
+  // Function to handle registration form submission
+  document.getElementById("register").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission for demonstration
+        const firstName = document.querySelector("#register input:nth-of-type(1)").value;
+        const lastName = document.querySelector("#register input:nth-of-type(2)").value;
+        const email = document.querySelector("#register input:nth-of-type(3)").value;
+        const password = document.querySelector("#register input:nth-of-type(4)").value;
+        const confirmPassword = document.querySelector("#register input:nth-of-type(5)").value;
+        const agree = document.querySelector("#register input[type='checkbox']").checked;
+
+        const existingUser = usersData.find((user) => user.email === email);
+
+        if (existingUser) {
+          alert("Account already exists with this email!");
+        } else {
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+          }
+
+          if (!agree) {
+            alert("Please agree to the terms and conditions.");
+            return;
+          }
+
+          // Register the new user
+          usersData.push({ email, password, firstName, lastName });
+          alert("Registered successfully!");
+          setTimeout(function () {
+        window.location.href = "index.html"; // Redirect to index.html
+      }, 200);
+        }
+        
+      }
+      
+      );
+</script>
+
+<script>
+  window.addEventListener("load", function () {
+    const loadingOverlay = document.getElementById("loading-overlay");
+    setTimeout(function() {
+      loadingOverlay.style.display = "none"; // Hide the loading overlay after 2 seconds
+    }, 500); // Set timeout for 2 seconds (2000 milliseconds)
+  });
+</script>
+
+    
+  </body>
+</html>

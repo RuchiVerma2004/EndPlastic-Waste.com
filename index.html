@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="utils.css" />
+    
+    
+    <link rel="stylesheet" href="web.css" />
+
+    <title>EndPlastic Waste.com</title>
+  </head>
+
+  <body>
+    <div id="loading-overlay">
+      <img src="reuse.gif" alt="Loading..." />
+  </div>
+    <header class="flex spacebetween align-items">
+      <div class="logo">
+        <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+      </div>
+      <nav>
+        <ul class="none show" id="navbar">
+          <li><a class="red" href="about.html">About Us</a></li>
+          <li><a class="red" href="stories.html">Our Stories</a></li>
+          <li><a class="red" href="news.html" target="_blank">News</a></li>
+          <li><a class="red" href="e-waste.html">e-waste</a></li>
+          <li>
+            <a class="red" href="clean4green.html" target="_blank"
+              >Clean4Green</a
+            >
+          </li>
+          <li><a class="red" href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="icon flex none" id="search">
+        <div class="search" onclick="toggleSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="search-container" id="searchContainer">
+          <div
+            class="search-container"
+          >
+            What are you looking for?
+          </div>
+          <div class="close-icon" onclick="closeSearch()">
+            <i class="fa-solid fa-xmark" style="color: black"></i>
+          </div>
+          <form action="https://www.google.com/search?">
+          <input type="text" if="dearch" name="q" placeholder="Search here..." /></form>
+          <i class="fa-solid fa-magnifying-glass se" style="color: grey"></i>
+        </div>
+        <div class="a">
+          <a href="login_page.html" target="_blank"
+            ><i class="fa-solid fa-user" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+      <div class="hi">
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+      </div>
+    </header>
+
+    <video
+      
+      style="height: 100vh; width: 100vw; object-fit: cover; max-height: 744px"
+    >
+      <source
+        src="https://player.vimeo.com/progressive_redirect/playback/651831018/rendition/1080p/file.mp4?loc=external&amp;signature=675dc4dbdc7bb0248934898c6fa8d6dd27c8d5b5461834c6de7e5922ecad3879"
+        type="video/mp4"
+        style="object-fit: cover"
+      />
+    </video>
+
+    <div class="title flexc">
+      <h1 class="narrow">Our planet<br /><b>is choking</b><br />on plastic</h1>
+      <h4>
+        Ending plastic waste is ambitious. But it is through<br />collaboration
+        and collective action that this complex problem <br />can be solved
+      </h4>
+      <a class="btn" href="about.html"><b>Learn More...</b></a>
+    </div>
+    <section class="col-text">
+      <p class="fl content1">
+        While plastic has many useful applications, we have developed a
+        dependence on single-use plastic products, which has negative effects on
+        the environment, society, the economy, and our health.
+      </p>
+      <p class="content1">
+        One million plastic bottles are bought globally every minute, and up to
+        five trillion plastic bags are used annually. Half of all plastic
+        produced is intended for single-use applications, meaning it will only
+        be used once before being discarded.
+      </p>
+      <p class="content1">
+        In today's world, plastics, particularly microplastics, are everywhere.
+        They are accumulating in the fossil record of the planet and serving as
+        a symbol of the Anthropocene, the period of time we are currently in.
+        Even a brand-new marine microbial habitat dubbed the
+        <a
+          href="https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/150017"
+          >"plastisphere".</a
+        >
+        bears their name.
+      </p>
+      <p class="content1">What brought us here, then?</p>
+    </section>
+    <section class="col-text">
+      <h3>
+        The production of plastic was relatively low between the 1950s and the
+        1970s, which made plastic trash more manageable.
+      </h3>
+    </section>
+
+    <section class="col-text">
+      <h3>
+        However, plastic trash generation more than quadrupled between the 1970s
+        and the 1990s, which was consistent with an increase in plastic
+        production.
+      </h3>
+    </section>
+
+    <section class="col-text">
+      <h3>
+        In the early 2000s, the amount of plastic waste we generated rose more
+        in a single decade than it had in the previous 40 years.
+      </h3>
+    </section>
+
+    <section class="col-text">
+      <h3>
+        Today, we produce about 400 million tonnes of plastic waste every year.
+      </h3>
+    </section>
+
+    <section class="light">
+      <div class="flex justify-center">
+        <div class="sec1 flexc">
+          <img
+            src="https://8515463.fs1.hubspotusercontent-na1.net/hub/8515463/hubfs/diving%20into%20the%20importance%20of%20blue%20forests_view%20on%20coral%20reef%20with%20hundreds%20of%20glass%20fish%2c%20Great%20Barrier%20Reef_featured.png?length=590&amp;name=diving%20into%20the%20importance%20of%20blue%20forests_view%20on%20coral%20reef%20with%20hundreds%20of%20glass%20fish%2c%20Great%20Barrier%20Reef_featured.png"
+            alt=""
+          />
+
+          <h3>
+            <a
+              href="https://www.green.earth/blog/beneath-the-waves-diving-into-the-importance-of-blue-forests"
+              >Beneath the waves: diving into the importance of blue forests
+              ecosystem</a
+            >
+          </h3>
+          <p>
+            Blue forests, a term often used to describe underwater ecosystems,
+            play a crucial role in maintaining the health...
+          </p>
+          <a style="text-align: center;" class="btn" href="https://www.green.earth/blog/beneath-the-waves-diving-into-the-importance-of-blue-forests"><b>Read More</b></a>
+        </div>
+
+        <div class="sec1 flexc">
+          <img
+            src="https://plasticsmartcities.org/wp-content/uploads/2023/09/NPIN-5th-Year-5-768x512.jpg"
+            alt=""
+          />
+
+          <h3>
+            <a
+              href="https://plasticsmartcities.org/no-plastic-in-nature-in-philippines/"
+              >Towards No Plastic in Nature: Five Years' Journey in the
+              Philippines, Across 10 Plastic Smart Cities</a
+            >
+          </h3>
+          <p>
+            WWF-Philippines' No Plastics in Nature (NPIN) initiative celebrated
+            its fifth anniversary on Tuesday, July 18 2023 at...
+          </p>
+        <a style="text-align: center;" class="btn" href="https://plasticsmartcities.org/no-plastic-in-nature-in-philippines/"><b>Read More</b></a>
+        </div>
+
+        <div class="sec1 flexc">
+          <img
+            src="https://8515463.fs1.hubspotusercontent-na1.net/hub/8515463/hubfs/DGB%20Group%20CEO%20Selwyn%20Duijvestijn%20returns%20to%20Business%20Class_Harry%20Mens%20and%20Selwyn%20Duijvestijn%20during%20an%20interview%20in%20Business%20Class%20programme_featured.png?length=590&amp;name=DGB%20Group%20CEO%20Selwyn%20Duijvestijn%20returns%20to%20Business%20Class_Harry%20Mens%20and%20Selwyn%20Duijvestijn%20during%20an%20interview%20in%20Business%20Class%20programme_featured.png"
+            alt=""
+          />
+
+          <h3>
+            <a
+              href="https://www.green.earth/blog/tv-spotlight-dgb-group-ceo-selwyn-duijvestijn-shares-insights-on-carbon-offsetting"
+              >TV spotlight: DGB Group CEO Selwyn Duijvestijn shares insights on
+              carbon offsetting</a
+            >
+          </h3>
+          <p>
+            On Sunday, 17 September, the CEO of DGB Group, Selwyn Duijvestijn,
+            appeared on Dutch television to t..
+          </p>
+          <a style="text-align: center;" class="btn" href="https://www.green.earth/blog/tv-spotlight-dgb-group-ceo-selwyn-duijvestijn-shares-insights-on-carbon-offsetting"><b>Read More</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="flexc sec2">
+      <h3>Let's work together</h3>
+      <p>
+        Drop us a message if you'd like to work with us to end plastic waste,
+        explore membership opportunities, media partnerships, or other
+        enquiries.
+      </p>
+      <div>
+        <b><a  class="btn btnc" href="contact.html">Contact Us</a></b>
+        <b><a  class="btn " href="">Follow Us</a></b>
+        
+       
+      </div>
+    </section>
+    <footer>
+      <div class="usec flex spacebetween align-items">
+        <div class="flex sec3">
+          <ul class="footer__item">
+            <li><a class="" href="about.html">About</a></li>
+            <li><a class="" href="about.html">Our Ambition</a></li>
+            <li><a class="" href="about.html">Leadership</a></li>
+            <li><a class="" href="about.html">Members</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="work.html">Our Work</a></li>
+            <li><a class="" href="work.html">Our Project</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="stories.html">Our Stories</a></li>
+            <li><a class="" href="stories.html">From EndPlastic</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="news.html">News</a></li>
+            <li><a class="" href="news.html">Media Releases</a></li>
+            <li><a class="" href="news.html">Progress Reports</a></li>
+          </ul>
+          <ul class="footer__item">
+            <li><a class="" href="index.html">Quick Links</a></li>
+            <li><a class="" href="privacy.html">Privacy Policy</a></li>
+            <li><a class="" href="tandc.html">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <a href="index.html"><b>EndPlastic</b><br />Waste.com</a>
+        </div>
+      </div>
+      <br /><br />
+      <hr />
+      <div class="secb flex spacebetween align-items" >
+        <p
+          class=""
+          style="color: #ffffff; font-size: small; padding-left: 4rem"
+        >
+          &copy; 2023 EndPlastic Waste.com.
+        </p>
+        <div class="icon">
+          <a href="https://www.instagram.com/"
+            ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/ruchi-verma2004/"
+            ><i class="fa-brands fa-linkedin-in" style="color: #ffffff"></i
+          ></a>
+          <a href="https://twitter.com/home"
+            ><i class="fa-brands fa-twitter" style="color: #ffffff"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="javas.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        const loadingOverlay = document.getElementById("loading-overlay");
+        setTimeout(function() {
+          loadingOverlay.style.display = "none"; 
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
